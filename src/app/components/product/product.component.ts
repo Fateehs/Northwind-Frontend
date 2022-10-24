@@ -44,7 +44,7 @@ export class ProductComponent implements OnInit {
       .subscribe((response) => {
         this.products = response.data;
       });
-      // asdaklsdhkasd
+      // asdaklsdhkasdasdasdasd
   }
 
   addToCart(product: Product) {
