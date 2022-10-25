@@ -1,15 +1,10 @@
 <br />
 <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label"
-    ><h5>Ürün Ara</h5></label
-  >
-  <input
-    type="text"
-    [(ngModel)]="filterText"
-    class="form-control"
-    id="filterText"
-    placeholder="Aramak istediğiniz ürünü giriniz..."
-  />
+  <label for="exampleFormControlInput1" class="form-label"></label>
+  <h5>Ürün Ara</h5>
+  </label>
+  <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText"
+    placeholder="Aramak istediğiniz ürünü giriniz..." />
 </div>
 <div *ngIf="filterText.length > 2" class="alert alert-success">
   Aranan ürün: {{ filterText }}
@@ -36,7 +31,9 @@
       <td>{{ product.unitPrice | vatAdded: 18 | currency }}</td>
       <td>{{ product.unitsInStock }}</td>
       <td>
-        <button (click)="addToCart(product)" type="button" class="btn btn-success">Add </button>
+        <button (click)="addToCart(product)" type="button" class="btn btn-success">
+          Add
+        </button>
       </td>
     </tr>
   </tbody>
