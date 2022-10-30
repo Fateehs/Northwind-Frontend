@@ -22,7 +22,12 @@
                     <input type="checkbox" value="remember-me"> Remember me
                 </label>
             </div>
-            <button class="w-100 btn btn-lg btn-primary" (click)="login()">Sign in</button>
+            <div class="mb-3"><button class="w-100 btn btn-lg btn-primary" (click)="login()">Login</button></div>
+
+            <div class="mb-3">
+                <h5>Or</h5>
+            </div>
+            <button class="w-100 btn btn-lg btn-warning" routerLink="/register">Register</button>
             <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
         </form>
     </main>

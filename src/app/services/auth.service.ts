@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { LoginModel } from '../models/loginModel';
+import { RegisterModel } from '../models/registerModel';
 import { SingleResponseModel } from '../models/singleResponseModel';
 import { TokenModel } from '../models/tokenModel';
 
@@ -11,6 +12,10 @@ import { TokenModel } from '../models/tokenModel';
 export class AuthService {
   apiUrl = 'https://localhost:44329/api/auth/';
   constructor(private httpClient: HttpClient) {}
+
+  register(registerModel: RegisterModel) {
+    return this.httpClient.post<SingleResponseModel<RegisterModel>>(this.apiUrl + 'register', registerModel);
+  }
 
   login(loginModel: LoginModel) {
     return this.httpClient.post<SingleResponseModel<TokenModel>>(
